@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'BigNoodleTitlingOb' ;
+    src: url(../fonts/big_noodle_titling_oblique.ttf);
+}
+
+@font-face {
+    font-family: 'BigNoodleTitling';
+    src: url(../fonts/big_noodle_titling.ttf);
+}
+
+:root {
+    --col-interface: rgb(241, 164, 57);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+body {
+    background-image: url(../img/hanamura.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'BigNoodleTitlingOb';
+}
+
+/************** SECTION MENU **************/
+
+/* page menu affichée */
+.menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    row-gap: 3em;
+}
+
+/* page menu cachée */
+.menu.hidden {
+    display: none;
+}
+
+/* titre + sous-titre */
+.menu .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* titre */
+.titles h1 {
+    padding-top: 0.5em;
+    margin: 0;
+    font-size: 80px;
+}
+
+/* sous-titre */
+.titles h2 {
+    margin: 0;
+    font-size: 40px;
+}
+
+/* règles */
+.rules {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 650px;
+    font-family: 'Helvetica';
+    font-size: 16px;
+    color: var(--col-interface);
+}
+
+/* design bouton général */
+button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'BigNoodleTitling';
+    color: white;
+    font-size: 30px;
+    border: solid 1px;
+    border-radius: 3px;
+    background-color: var(--col-interface);
+}
+
+button.inactive {
+    cursor: not-allowed;
+}
+
+/************** SECTION JEU **************/
+
+/* page jeu affichée */
+.game.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* page jeu caché */
+.game.hidden {
+    display: none;
+}
+
+/* affichage des scores */
+.scores {
+    display: flex;
+    column-gap: 5em;
+    font-size: 40px;
+    color: var(--col-interface);
+    padding-top: 0;
+}
+
+/* affichage des choix joueur/computer + résultat du round */
+.choices-compare {
+    display: flex;
+    column-gap: 2em;
+    font-size: 40px;
+    color: rgb(241, 164, 57);
+}
+
+/* résultat du round */
+.result-round {
+    padding-bottom: 1em;
+    font-size: 50px;
+}
+
+/* gifs */
+.gifs .show {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+
+/* le gif n'apparait pas */
+.gifs .hidden {
+    display: none;
+}
+
+/* couleur des données */
+.score-player,.score-computer,.player-choice,.computer-choice,.result-round {
+    color: white;
+}
+
+/* affichage des 3 choix possibles */
+.choices {
+    display: flex;
+    column-gap: 5em;
+}
+
+/* bloc images + noms */
+.block-img {
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+}
+
+/* images choix */
+.choices img {
+    height: 300px;
+}
+
+button.inactive {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: rgb(217, 217, 217)
+
+}
+
+/* affichage nombre rounds restants */
+.counter-rounds {
+    font-size: 40px;
+}
+
+/* volet rappel des règles */
+.rules-reminder {
+    width: 430px;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Helvetica';
+    font-size: 16px;
+    color: var(--col-interface);
+}
+
+/* phrase cliquable règles */
+#rules-button {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* règles cachées */
+.rules-reminder span.hidden {
+    display: none;
+}
+
+/************** SECTION RESULTAT **************/
+
+/* page résultat affiché */
+.result.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
+
+.result.show h2 {
+    margin-bottom: 0.5em;
+}
+
+/* page résultat caché */
+.result.hidden {
+    display: none;
+}
+
+.final-score {
+    display: flex;
+    font-size: 80px;
+    column-gap: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* affichage victoire/défaite/égalité */
+.final-result {
+    font-size: 300px;
+}
+
+.finished {
+    display: flex;
+    column-gap: 1em;
+}

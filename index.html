@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+    <main>
+        <section class="menu show">
+            <span class="titles">
+                <h1>Shifumi</h1>
+                <h2>Version Overwatch</h2>
+            </span>
+            <p class="rules">[Ordinateur]: Bonjour cher adversaire ! Laisse-moi t'expliquer les <strong>règles du jeu</strong> : <br><br>Tu choisis l'un des 3 personnages - Fatale, Winston ou Pharah - et je fais de même ! <br><br>Le gagnant est déterminé par les règles suivantes : <br><br>- <strong>Fatale bat Pharah</strong>, <i>le sniper fait redescendre tout ce qui vole...</i> <br><br>- <strong>Winston bat Fatale</strong>, <i>rien de mieux qu'un singe pour aller dénicher un sniper !</i> <br><br>- <strong>Pharah bat Winston</strong>, <i>"la justice s'abat des cieux !"</i></p>
+            <!-- faire choix pseudo + avatars -->
+            <button id="play" class="clickable">JOUER</button>
+        </section>
+        <section class="game hidden">
+            <div class="scores">
+                <p>Ton score : <span class="score-player"></span></p>
+                <p>Score ordi : <span class="score-computer"></span></p>
+            </div>
+            <div class="choices-compare">
+                <div>Ton choix : <span class="player-choice">?</span></div>
+                <div class="result-round">Choisis...</div>
+                <div>Choix ordi : <span class="computer-choice">?</span></div>
+            </div>
+            <div class="gifs">
+                <img src="./assets/img/win widow.gif" alt="Victoire - Widow tue Pharah" id="widow-win" class="hidden clickable">
+                <img src="./assets/img/win winston.gif" alt="Victoire - Winston tue Widow" id="winston-win" class="hidden clickable">
+                <img src="./assets/img/win pharah.gif" alt="Victoire - Pharah tue Winston" id="pharah-win" class="hidden clickable">
+                <img src="./assets/img/lose widow.gif" alt="Défaite - Widow tué par Winston" id="widow-lose" class="hidden clickable"> 
+                <img src="./assets/img/lose winston.gif" alt="Défaite - Winston tué par Pharah" id="winston-lose" class="hidden clickable">
+                <img src="./assets/img/lose pharah.gif" alt="Défaite - Pharah tuée par Widow" id="pharah-lose" class="hidden clickable">
+                <img src="./assets/img/draw widow.gif" alt="Égalité - Widows s'entretuent" id="widow-draw" class="hidden clickable">
+                <img src="./assets/img/draw winston.gif" alt="Égalité - Winstons s'entretuent" id="winston-draw" class="hidden clickable">
+                <img src="./assets/img/draw pharah.gif" alt="Égalité - Pharahs s'entretuent" id="pharah-draw" class="hidden clickable">
+            </div>
+            <div class="choices">
+                <div class="block-img">
+                    <img src="./assets/img/Widow.jpeg" alt="Fatale d'Overwatch">
+                    <button id="scissors" class="active clickable">Fatale</button>
+                </div>
+                <div class="block-img">
+                    <img src="./assets/img/Winston.jpeg" alt="Winston d'Overwatch">
+                    <button id="stone" class="active clickable">Winston</button>
+                </div>
+                <div class="block-img">
+                    <img src="./assets/img/Pharah.jpeg" alt="Pharah d'Overwatch">
+                    <button id="paper" class="active clickable">Pharah</button>
+                </div>
+            </div>
+            <p class="counter-rounds">Round(s) restant(s) : <span class="rounds"></span></p>
+            <p class="rules-reminder">[Ordinateur]: 
+                <span id="rules-button" class="clickable">CLIQUE ICI POUR UN RAPPEL DES RÈGLES</span>
+                <span class="reminder hidden"><br><br>- Fatale bat Pharah <br><br>- Pharah bat Winston <br><br>- Winston bat Fatale</span>
+            </p>
+            </div>
+        </section>
+        <section class="result hidden">
+            <h2>Résultat</h2>
+            <div class="final-score">
+                <div class="avatar-player"></div>
+                <div class="final-score-player">0</div>
+                <div><strong>/</strong></div>
+                <div class="final-score-computer">0</div>
+                <div class="avatar-computer"></div>
+            </div>
+            <span class="final-result"></span>
+            <div class="finished">
+                <button id="replay" class="clickable">Rejouer</button>
+                <button id="leave" class="clickable">Quitter</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
