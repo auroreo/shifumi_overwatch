@@ -17,6 +17,12 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
     background-image: url(../img/hanamura.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,25 +182,22 @@ button.inactive {
     font-size: 40px;
 }
 
-/* volet rappel des règles */
+/* Rappel des règles */
+
 .rules-reminder {
     width: 430px;
     padding: 1em;
+    margin-bottom: 1em;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.6);
     font-family: 'Helvetica';
     font-size: 16px;
-    color: var(--col-interface);
+    color: var(--col-interface)
 }
 
 /* phrase cliquable règles */
 #rules-button {
     color: rgba(255, 255, 255, 0.6);
-}
-
-/* règles cachées */
-.rules-reminder span.hidden {
-    display: none;
 }
 
 /************** SECTION RESULTAT **************/
@@ -235,4 +238,18 @@ button.inactive {
 .finished {
     display: flex;
     column-gap: 1em;
+}
+
+a {
+    text-decoration: unset;
+    color: var(--col-interface);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-family: 'Helvetica';
+    text-decoration: unset;
+    color: white;
 }

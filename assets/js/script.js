@@ -194,8 +194,7 @@ let playGame = function() {
 
 // FONCTION6 qui montre les règles
 let showRules = function() {
-    let rulesReminder = document.querySelector('.reminder.hidden');
-    rulesReminder.classList.replace('hidden','show');
+    alert('Fatale bat Pharah \nPharah bat Winston \nWinston bat Fatale')
 }
 
 // FONCTION7 qui permet de rejouer
